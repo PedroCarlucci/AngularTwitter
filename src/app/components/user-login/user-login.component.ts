@@ -13,12 +13,12 @@ export class UserLoginComponent implements OnInit {
     password: ''
   }
   loginObj:any = {
-    userName: '',
+    email: '',
     password: ''
   }
 
   onLogin(): void {
-    console.log(this.loginObj.userName)
+    console.log(this.loginObj.email)
     console.log(this.loginObj.password)
   }
 
