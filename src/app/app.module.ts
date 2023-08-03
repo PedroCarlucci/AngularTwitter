@@ -10,13 +10,19 @@ import { UserSignupComponent } from './components/user-signup/user-signup.compon
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { TweetComponent } from './components/tweet/tweet.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
+import { ProfilePageComponent } from './components/profile-page/profile-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UserLoginComponent,
-    UserSignupComponent
+    UserSignupComponent,
+    TweetComponent,
+    MainPageComponent,
+    ProfilePageComponent
   ],
   imports: [
     BrowserModule,

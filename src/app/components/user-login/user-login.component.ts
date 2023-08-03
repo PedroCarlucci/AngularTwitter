@@ -7,11 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserLoginComponent implements OnInit {
   signupUsers: any[] = [];
-  signupObj:any = {
-    userName: '',
-    email: '',
-    password: ''
-  }
+  
   loginObj:any = {
     email: '',
     password: ''
