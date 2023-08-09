@@ -1,8 +1,22 @@
 .section {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    .header {
+        position: sticky;
+        top: 0;
+        width: 100%;
+    }
     
+    .tweet-post {
+        width: 45%;
+    }
+
+    .tweets-feed {
+        width: 45%;
+    }
 
 }

@@ -1,0 +1,11 @@
+<div class="tweet-section">
+    <div class="profile-info">
+        <img class="profile-pic" src="../../assets/images/perfil-img.png" alt="profile-pic"> 
+        <div class="field-box">
+            <input class="text-field" [(ngModel)]="userInput" (keyup.enter)="onClickAddTweet()" placeholder="What's happening?">
+        </div>
+    </div>
+    <div class="actions">
+        <button class="post-button" (click)="onClickAddTweet()" mat-raised-button>Post</button>
+    </div>
+</div>

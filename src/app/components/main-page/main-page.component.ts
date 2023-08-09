@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 
 @Component({
   selector: 'app-main-page',
@@ -10,7 +10,12 @@ export class MainPageComponent {
   valueToPass: string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis elit non sapien laoreet eleifend. Proin maximus massa vel scelerisque gravida. Nulla facilisi. Aenean facilisis ligula sed est pharetra, non ultrices urna finibus. Vivamus maximus lorem vitae ligula fermentum, ut tincidunt mauris scelerisque. Integer facilisis urna eget lectus placerat, quis vulputate nisi facilisis. Donec bibendum felis quis tellus placerat posuere. Nam ut ante at felis ultricies tempus a eget dui. Phasellus euismod a ligula in dignissim. Sed sit amet hendrerit nulla, eu gravida ex. Sed elementum neque sit amet cursus blandit."
   tweets: Tweet[] = [];
 
-  constructor () {
+  addTweet(tweet: Tweet) {
+    this.tweets.unshift(tweet);
+    this.cdr.detectChanges();
+  }
+
+  constructor (private cdr: ChangeDetectorRef) {
     const randomTexts = ['Hello!', 'Nice day!', 'Angular is great!', 'Coding is fun!'];
     const randomUsers = ['user1', 'user2', 'user3', 'user4'];
     const randomIndex = Math.floor(Math.random() * 4);

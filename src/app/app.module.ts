@@ -13,6 +13,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { TweetComponent } from './components/tweet/tweet.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { ProfilePageComponent } from './components/profile-page/profile-page.component';
+import { TweetPostComponent } from './components/tweet-post/tweet-post.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { ProfilePageComponent } from './components/profile-page/profile-page.com
     UserSignupComponent,
     TweetComponent,
     MainPageComponent,
-    ProfilePageComponent
+    ProfilePageComponent,
+    TweetPostComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,8 @@ import { ProfilePageComponent } from './components/profile-page/profile-page.com
     FormsModule,
     MatButtonModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

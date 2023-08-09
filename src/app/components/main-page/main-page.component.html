@@ -1,4 +1,10 @@
 <div class="section">
+    <div class="header">
+        <app-header></app-header>
+    </div>
+    <div class="tweet-post">
+        <app-tweet-post [username]="username"></app-tweet-post>
+    </div>
     <div class="tweets-feed" *ngFor="let t of tweets">
         <app-tweet [tweet]="t"></app-tweet>
     </div>

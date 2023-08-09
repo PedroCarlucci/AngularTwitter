@@ -6,11 +6,11 @@
         <h1>Login on Twitter</h1>
         <mat-form-field class="email-input">
             <mat-label>Email</mat-label>
-            <input type="email" matInput placeholder="Ex. pat@example.com" [(ngModel)]="loginObj.email">
+            <input type="email" matInput placeholder="Ex. pat@example.com" [(ngModel)]="loginObj.email" (keyup.enter)="onLogin()">
           </mat-form-field>
         <mat-form-field class="password-input">
             <mat-label>Password</mat-label>
-            <input type="password" matInput [(ngModel)]="loginObj.password">
+            <input type="password" matInput [(ngModel)]="loginObj.password" (keyup.enter)="onLogin()">
           </mat-form-field>
         <a routerLink="/signup" >Click here to sign up</a>
         <button class="login-button" (click)="onLogin()" mat-raised-button>Login</button>

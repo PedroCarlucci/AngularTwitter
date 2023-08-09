@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-login',
@@ -13,9 +14,13 @@ export class UserLoginComponent implements OnInit {
     password: ''
   }
 
+  constructor (private router: Router) {}
+
   onLogin(): void {
-    console.log(this.loginObj.email)
-    console.log(this.loginObj.password)
+    if ((sessionStorage.getItem("email") == this.loginObj.email) 
+    && (sessionStorage.getItem("password") == this.loginObj.password)) {
+      this.router.navigate(['/feed']);
+    }
   }
 
   ngOnInit(): void {
